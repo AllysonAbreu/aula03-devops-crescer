@@ -43,7 +43,7 @@ jobs:
   tests:
     name: Testes Automatizados
     needs: code-quality
-    runs-on: ubutun-latest
+    runs-on: ubuntu-latest
     
     steps:
       - name: Git Checkout
