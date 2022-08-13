@@ -77,7 +77,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: registry.heroku.com/app-helloworld/web:latest
+          tags: registry.heroku.com/app-helloworldcrescer/web:latest
   
   deploy:
     name: Publica ambiente de desenvolvimento
@@ -92,7 +92,7 @@ jobs:
           username: ${{ secrets.HEROKU_EMAIL }}
           password: ${{ secrets.HEROKU_API_KEY }}
       - name: Publicação
-        run: heroku container:release -a app-helloworld web
+        run: heroku container:release -a app-helloworldcrescer web
         env: 
           HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
